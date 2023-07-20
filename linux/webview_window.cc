@@ -163,7 +163,7 @@ void WebviewWindow::SetApplicationNameForUserAgent(const std::string &app_name) 
 }
 
 void WebviewWindow::Close() {
-  gtk_window_close(GTK_WINDOW(window_));
+  gtk_window_hide(GTK_WINDOW(window_));
 }
 
 void WebviewWindow::OnLoadChanged(WebKitLoadEvent load_event) {
