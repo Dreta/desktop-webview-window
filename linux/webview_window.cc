@@ -129,6 +129,7 @@ WebviewWindow::WebviewWindow(
   auto settings = webkit_web_view_get_settings(WEBKIT_WEB_VIEW(webview_));
   gtk_widget_set_size_request(GTK_WIDGET(webview_), -1, height - title_bar_height);
   webkit_settings_set_javascript_can_open_windows_automatically(settings, true);
+  webkit_settings_set_enable_private_browsing(settings, TRUE);
   default_user_agent_ = webkit_settings_get_user_agent(settings);
   gtk_box_pack_start(box_, webview_, true, true, 0);
 
